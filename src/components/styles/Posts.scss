@@ -1,0 +1,22 @@
+.posts {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  &-wrapper {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.alert {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  margin-top: 50px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}

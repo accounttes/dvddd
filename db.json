@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$ulyGS1i3SOhB10iuQ5mBFuAUDvYy0hc2z3SP531GoCFCnQopHrmKe",
+      "id": 1
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$N.HfB6CMFJS.Qk7ZGtjkYee8L/ouL03OiIuLNUlAJS07FfvBuQWNW",
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "isAuth": true
+    }
+  ]
+}

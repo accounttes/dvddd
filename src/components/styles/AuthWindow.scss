@@ -1,0 +1,126 @@
+@mixin font-settings {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+
+  &-wrapper {
+    margin-top: 229px;
+    width: 480px;
+    height: 330px;
+    box-sizing: border-box;
+    border: 5px solid #27569c;
+  }
+
+  &-form {
+    &-field:first-child {
+      margin-bottom: 25px;
+    }
+
+    &-field {
+      display: flex;
+      margin-left: 19px;
+      @include font-settings;
+
+      &-login {
+        &__label {
+          width: 117px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          margin-right: 28px;
+        }
+      }
+
+      &-register {
+        &__label {
+          width: 145px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &__input {
+        box-sizing: border-box;
+        width: 295px;
+        background: #d9d9d9;
+        border: 4px solid #27569c;
+        border-radius: 10px;
+        @include font-settings;
+      }
+    }
+
+    &__error {
+      color: red;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+    }
+  }
+
+  &__title {
+    @include font-settings;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #27569c;
+    width: 440px;
+    height: 70px;
+    margin-top: 25px;
+    margin-left: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .auth {
+    &-wrapper {
+      width: 290px;
+      height: 328px;
+      box-sizing: border-box;
+      margin-top: 14px;
+    }
+
+    &__title {
+      width: 212px;
+      height: 45px;
+      margin-top: 19px;
+      margin-left: 35px;
+      margin-bottom: 27px;
+    }
+
+    &-form {
+      &-field:first-child {
+        margin-bottom: 14px;
+      }
+      &-field {
+        flex-direction: column;
+        margin-left: 35px;
+
+        &-login {
+          &__label {
+            margin-bottom: 13px;
+          }
+        }
+
+        &-register {
+          &__label {
+            margin-bottom: 6px;
+          }
+        }
+
+        &__input {
+          width: 219px;
+        }
+      }
+    }
+  }
+}

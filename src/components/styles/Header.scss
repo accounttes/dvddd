@@ -1,0 +1,69 @@
+@mixin font-settings {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.mobile-header__logo {
+  display: none;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  background: #e4b062;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    width: 273px;
+    height: 63px;
+    margin-left: 41px;
+  }
+
+  &__logout {
+    width: 62px;
+    height: 55px;
+    margin-right: 35px;
+    cursor: pointer;
+
+    &-block {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__username {
+    @include font-settings;
+    margin-right: 34px;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .header {
+    &__username {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    &__logo {
+      display: none;
+    }
+
+    &__logout {
+      margin-right: 0;
+    }
+  }
+
+  .mobile-header__logo {
+    display: block;
+    margin-left: 15px;
+    width: 70px;
+    height: 63px;
+  }
+}
